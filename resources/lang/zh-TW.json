@@ -15,5 +15,10 @@
     "Toggle navigation": "縮放導覽工具",
     "Register": "註冊",
     "Name": "姓名",
+    "Gender": "性別",
+    "Postal_code": "郵遞區號",
+    "Address": "地址",
+    "Id_Number": "身分證字號",
+    "Phone": "手機",
     "Logout": "登出"
 }
