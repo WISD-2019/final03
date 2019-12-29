@@ -11,4 +11,10 @@ class Reservation extends Model
     {
         return $this->belongsTo(User::class);
     }
+    //model a->room b->reservation c->item
+    //b 要hasMany c
+    public function item()
+    {
+        return $this->hasMany(Item::class);
+    }
 }
