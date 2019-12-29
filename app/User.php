@@ -42,4 +42,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Comment::class);
     }
+
+    //一個使用者可有多個訂單
+    public function reservation()
+    {
+        return $this->hasMany(Reservation::class);
+    }
 }
