@@ -18,7 +18,9 @@
     "Gender": "性別",
     "Postal_code": "郵遞區號",
     "Address": "地址",
+    "Birthday" : "生日",
     "Id_Number": "身分證字號",
     "Phone": "手機",
+    "Type" : "身分",
     "Logout": "登出"
 }
