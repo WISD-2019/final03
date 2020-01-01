@@ -12,9 +12,22 @@
 */
 
 Route::get('/', function () {
-    return view('bootstarap.post');
+    return view('welcome');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('index', function () {
+    return view('bootstarap.index');
+})->name('index');
+Route::get('post', function () {
+    return view('bootstarap.post');
+})->name('post');
+Route::get('about', function () {
+    return view('bootstarap.about');
+})->name('about');
+Route::get('contact', function () {
+    return view('bootstarap.contact');
+})->name('contact');
