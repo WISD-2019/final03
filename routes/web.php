@@ -32,5 +32,12 @@ Route::get('contact', function () {
     return view('bootstarap.contact');
 })->name('contact');
 
+//房型
 Route::get('room', 'RoomController@index')->name('room');
+
+//訂單
+Route::get('reservation', function () {
+    return view('reservation');
+})->name('reservation');
+//Route::post('reservation', 'ReservationController@store')->name('reservation');
 
