@@ -11,6 +11,8 @@
 |
 */
 
+Route::pattern('id' , '[0-9]+');
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -34,6 +36,7 @@ Route::get('contact', function () {
 
 //房型
 Route::get('room', 'RoomController@index')->name('room');
+Route::get('/room/{room}', 'RoomController@show')->name('room.show');
 
 //訂單
 Route::get('reservation', function () {

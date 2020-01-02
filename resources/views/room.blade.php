@@ -21,13 +21,17 @@
     <div class="card-deck">
         @forelse($rooms as $room)
             <div class="card mb-4">
+                <a href="room/{{ $room->id }}">
                 <img src="{{ $room->photo }}" class="card-img-top" alt="{{ $room->type }}">
+                </a>
                 <div class="card-body">
-                    <h5 class="card-title">{{ $room->type }}</h5>
+                    <h5 class="card-title">
+                        <a href="room/{{ $room->id }}">{{ $room->type }}</a>
+                    </h5>
                 </div>
                 <div class="card-footer text-center">
                     ${{ $room->price }}
-                    <a href="#" class="btn btn-primary">詳細資料...</a>
+                    <a href="room/{{ $room->id }}" class="btn btn-primary">詳細資料...</a>
                 </div>
             </div>
         @empty
