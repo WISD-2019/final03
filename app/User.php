@@ -48,4 +48,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Reservation::class);
     }
+
+    //一個使用者可有多個購物車
+    public function cart()
+    {
+        return $this->hasMany(Cart::class);
+    }
 }

@@ -44,3 +44,6 @@ Route::get('reservation', function () {
 })->name('reservation');
 //Route::post('reservation', 'ReservationController@store')->name('reservation');
 
+//購物車
+Route::post('/cart', 'CartController@store')->name('cart.store');
+

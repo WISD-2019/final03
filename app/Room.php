@@ -12,4 +12,9 @@ class Room extends Model
     {
         return $this->hasMany(Item::class);
     }
+
+    public function cart()
+    {
+        return $this->hasMany(Cart::class);
+    }
 }
