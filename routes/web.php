@@ -31,3 +31,6 @@ Route::get('about', function () {
 Route::get('contact', function () {
     return view('bootstarap.contact');
 })->name('contact');
+
+Route::get('room', 'RoomController@index')->name('room');
+
