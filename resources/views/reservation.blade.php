@@ -17,8 +17,9 @@
         </div>
     </header>
 
-    <!--
-    <form action="{{ route('reservation') }}" method="POST">
+    <!--任務
+    @if(Auth::check())
+        <form action="{{ route('reservation') }}" method="POST">
         @csrf
 
         <div class="form-group row">
@@ -63,6 +64,8 @@
             </div>
         </div>
 
-    </form>-->
-
+    </form>
+    @else
+        <p class="text-center">請先&nbsp;&nbsp;<a href="{{ route('login') }}">登入</a></p>
+    @endif-->
 @endsection
