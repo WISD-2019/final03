@@ -15,16 +15,13 @@
                     <a class="nav-link" href="{{ route('reservation.index') }}">我的訂單</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('index') }}">Home</a>
+                    <a class="nav-link" href="{{ route('about') }}">關於我們</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('about') }}">About</a>
+                    <a class="nav-link" href="{{ route('post') }}">最新消息</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('post') }}">Sample Post</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('contact') }}">Contact</a>
+                    <a class="nav-link" href="{{ route('traffic') }}">交通資訊</a>
                 </li>
             </ul>
         </div>

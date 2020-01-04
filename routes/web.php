@@ -24,15 +24,21 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('index', function () {
     return view('bootstarap.index');
 })->name('index');
+
+//最新消息
 Route::get('post', function () {
     return view('bootstarap.post');
 })->name('post');
+
+//關於我們
 Route::get('about', function () {
     return view('bootstarap.about');
 })->name('about');
-Route::get('contact', function () {
-    return view('bootstarap.contact');
-})->name('contact');
+
+//交通
+Route::get('traffic', function () {
+    return view('bootstarap.traffic');
+})->name('traffic');
 
 //房型
 Route::get('room', 'RoomController@index')->name('room');

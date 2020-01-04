@@ -91,7 +91,7 @@
                     <a href="{{ route('index') }}">線上訂房</a>
                     <a href="{{ route('about') }}">關於我們</a>
                     <a href="{{ route('post') }}">最新消息</a>
-                    <a href="{{ route('contact') }}">訪客留言</a>
+                    <a href="{{ route('traffic') }}">交通資訊</a>
                 </div>
             </div>
         </div>
