@@ -19,6 +19,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <link href="{{asset('css/clean-blog.min.css')}}" rel="stylesheet">
 
 </head>
@@ -43,7 +44,8 @@
 
 <!-- Custom scripts for this template -->
 <script src="{{asset('js/clean-blog.min.js')}}"></script>
-
+<script src="{{ mix('js/app.js') }}"></script>
+@yield('scriptsAfterJs')
 </body>
 
 </html>

@@ -46,4 +46,6 @@ Route::get('reservation', function () {
 
 //購物車
 Route::post('/cart', 'CartController@store')->name('cart.store');
+Route::post('/cart/store', 'CartController@store')->name('cart.store');
+//Route::post('cart', 'CartController@store')->name('cart.store');
 

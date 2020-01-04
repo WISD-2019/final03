@@ -36,6 +36,12 @@ class CartController extends Controller
     public function store(Request $request)
     {
         //
+        Cart::create([
+            'user_id'    => $request->user()->id,
+            'room_id' => $request->room_id,
+            'amount'     => $request->amount,
+        ]);
+        return [];
     }
 
     /**
@@ -67,7 +73,7 @@ class CartController extends Controller
      * @param  \App\Cart  $cart
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cart $cart)
+    public function update(Request $request,$id)
     {
         //
     }

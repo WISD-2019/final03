@@ -18,7 +18,8 @@
     </header>
 
     <!--房型一覽-->
-    <div class="card-deck">
+
+        <div class="card-deck">
         @forelse($rooms as $room)
             <div class="card mb-4">
                 <a href="room/{{ $room->id }}">
@@ -31,7 +32,7 @@
                 </div>
                 <div class="card-footer text-center">
                     ${{ $room->price }}
-                    <a href="room/{{ $room->id }}" class="btn btn-primary">詳細資料...</a>
+                    <button class="btn btn-primary btn-add-to-cart" data-id="{{ $room->id }}">加入購物車</button>
                 </div>
             </div>
         @empty
@@ -42,5 +43,14 @@
             </div>
         @endforelse
     </div>
+        <input type="hidden" name="amount" value="1">
 
+@endsection
+
+@section('scriptsAfterJs')
+    <script>
+        $(document).ready(function () {
+            @include('room.add2cart')
+        });
+    </script>
 @endsection
