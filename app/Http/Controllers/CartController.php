@@ -48,6 +48,8 @@ class CartController extends Controller
             Cart::create([
                 'user_id'    => $request->user()->id,
                 'room_id' => $request->room_id,
+                'checkin' => $request->checkin,
+                'checkout' => $request->checkout,
                 'amount'     => $request->amount,
             ]);
         }

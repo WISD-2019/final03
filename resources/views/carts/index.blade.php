@@ -4,11 +4,13 @@
         $total = 0;
     @endphp
     <h1>我的購物車</h1>
+    <form action="{{ route('reservation.store') }}" method="post" id="order-form">
+        @csrf
     <table class="table table-striped">
         <tr>
-            <th colspan=2>商品名稱</th>
-            <th nowrap class="text-right">商品單價</th>
-            <th nowrap class="text-center">購買數量</th>
+            <th colspan=2>房型</th>
+            <th nowrap class="text-right">房型單價</th>
+            <th nowrap class="text-center">預定房數</th>
             <th nowrap class="text-right">小計</th>
             <th>功能</th>
         </tr>
@@ -35,7 +37,8 @@
                         <input type="number" min="1" class="form-control text-center amount" name="amount[{{ $cart->room_id }}]" value="{{ $cart->amount }}" data-cartid="{{ $cart->id }}">
                     @else
                         <div class="warning">该商品已下架</div>
-                    @endif</td>
+                    @endif
+                </td>
                 <td class="text-right">
                     <span class="sum" id="sum-{{ $cart->id }}">
                         {{ $cart->room->price * $cart->amount }}
@@ -47,7 +50,6 @@
                 $total+= $cart->room->price * $cart->amount
             @endphp
         @empty
-
             <tr>
                 <td><h1>購物車空無一物</h1></td>
             </tr>
@@ -57,9 +59,31 @@
                 <th nowrap class="text-right">
                     <span id="total">{{ $total }}</span>
                 </th>
-            <th>元</th>
-        </tr>
+                <th>元</th>
+            </tr>
     </table>
+        <label class="col-form-label col-sm-3 text-md-right">入住日期</label>
+        <div class="col-sm-7">
+            <input type="date" class="form-control" name="checkin">
+        </div>
+        <label class="col-form-label col-sm-3 text-md-right">退房日期</label>
+        <div class="col-sm-7">
+            <input type="date" class="form-control" name="checkout">
+        </div>
+        <label class="col-form-label col-sm-3 text-md-right">需求：</label>
+        <div class="col-sm-7">
+            <input type="text" class="form-control" name="need">
+        </div>
+        <label class="col-form-label col-sm-3 text-md-right">優惠碼：</label>
+        <div class="col-sm-7">
+            <input type="text" class="form-control" name="discount">
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-2">
+                <button type="submit" class="btn btn-primary">送出訂單</button>
+            </div>
+        </div>
+    </form>
 @endsection
 
 @section('scriptsAfterJs')

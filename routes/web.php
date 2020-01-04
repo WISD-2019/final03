@@ -39,10 +39,9 @@ Route::get('room', 'RoomController@index')->name('room');
 Route::get('/room/{room}', 'RoomController@show')->name('room.show');
 
 //訂單
-Route::get('reservation', function () {
-    return view('reservation');
-})->name('reservation');
-//Route::post('reservation', 'ReservationController@store')->name('reservation');
+Route::post('/reservation/store', 'ReservationController@store')->name('reservation.store');
+Route::get('/reservation', 'ReservationController@index')->name('reservation.index');
+
 
 //購物車
 Route::post('/cart/store', 'CartController@store')->name('cart.store');
