@@ -48,6 +48,10 @@ Route::post('/cart/store', 'CartController@store')->name('cart.store');
 Route::get('/cart', 'CartController@index')->name('cart.index');
 Route::delete('/cart/{id}', 'CartController@destroy')->name('cart.destroy');
 
+//留言
+Route::get('/comment', 'CommentController@index')->name('comment.index');
+Route::post('/comment/store', 'CommentController@store')->name('comment.store');
+
 // 後台
 Route::group(['prefix' => 'admin'], function() {
     Route::get('/', ['as' => 'admin.dashboard.index', 'uses' => 'AdminDashboardController@index']);

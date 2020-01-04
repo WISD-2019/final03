@@ -15,6 +15,7 @@ class CommentController extends Controller
     public function index()
     {
         //
+        return view('comments.index');
     }
 
     /**
@@ -36,6 +37,11 @@ class CommentController extends Controller
     public function store(Request $request)
     {
         //
+        $comment             = new Comment;
+        $comment->user_id    = $request->user()->id;
+        $comment->content    =$request->comment;
+        $comment->save();
+        return view('comments.commentok');
     }
 
     /**
