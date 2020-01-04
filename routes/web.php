@@ -49,3 +49,17 @@ Route::post('/cart/store', 'CartController@store')->name('cart.store');
 Route::get('/cart', 'CartController@index')->name('cart.index');
 Route::delete('/cart/{id}', 'CartController@destroy')->name('cart.destroy');
 
+// 後台
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('/', ['as' => 'admin.dashboard.index', 'uses' => 'AdminDashboardController@index']);
+
+    Route::get('posts'          , ['as' => 'admin.posts.index' , 'uses' => 'UsersController@index']);
+    Route::get('posts/create'   , ['as' => 'admin.posts.create', 'uses' => 'UsersController@create']);
+    Route::get('posts/{id}/edit', ['as' => 'admin.posts.edit'  , 'uses' => 'UsersController@edit']);
+    //單元練習< 練習6-4> 設定更新所需的 Route
+    Route::patch('posts/{id}',    ['as' => 'admin.posts.update', 'uses' => 'UsersController@update']);
+    //單元練習< 練習4-3> 開啟新增的Route
+    Route::post('posts',['as'=>'admin.posts.store','uses'=> 'UsersController@store']);
+    //單元練習< 練習7-1> 設定所需的 Route
+    Route::delete('posts/{id}'  , ['as' => 'admin.posts.destroy', 'uses' => 'UsersController@destroy']);
+});
