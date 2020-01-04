@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Cart;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use mysql_xdevapi\Table;
 
 class CartController extends Controller
 {
@@ -12,9 +14,11 @@ class CartController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
+        $carts =$request->user()->cart()->get();;
+        return view('carts.index', compact('carts'));
     }
 
     /**
@@ -36,11 +40,18 @@ class CartController extends Controller
     public function store(Request $request)
     {
         //
-        Cart::create([
-            'user_id'    => $request->user()->id,
-            'room_id' => $request->room_id,
-            'amount'     => $request->amount,
-        ]);
+        if ($cart = $request->user()->cart()->where('room_id', $request->room_id)->first()) {
+            $cart->update([
+                'amount' => $cart->amount + $request->amount,
+            ]);
+        } else{
+            Cart::create([
+                'user_id'    => $request->user()->id,
+                'room_id' => $request->room_id,
+                'amount'     => $request->amount,
+            ]);
+        }
+
         return [];
     }
 
@@ -84,8 +95,10 @@ class CartController extends Controller
      * @param  \App\Cart  $cart
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Cart $cart)
+    public function destroy($id, Request $request)
     {
         //
+        $request->user()->cart()->where('room_id', $id)->delete();
+        return [];
     }
 }
