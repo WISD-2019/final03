@@ -152,7 +152,7 @@
                             <label for="type" class="col-md-4 col-form-label text-md-right">{{ __('Type') }}</label>
 
                             <div class="col-md-6">
-                                <input id="type" type="text" class="form-control @error('type') is-invalid @enderror" name="type" value="{{ old('type') }}" required autocomplete="type">
+                                <input id="type" type="radio" class="form-control @error('type') is-invalid @enderror" name="type" value="1" required autocomplete="gender" style="width: 15px; height: 15px">使用者
 
                                 @error('type')
                                 <span class="invalid-feedback" role="alert">
