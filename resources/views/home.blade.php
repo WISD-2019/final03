@@ -17,10 +17,13 @@
                      <font size="5px"><b>工作列表</b></font>
                         <hr>
                         <div class="carts">
-                            <a class="reservations" href="{{ route('about') }}"><font size="5px"><b>去逛逛</b></font></a>
+                            <a class="about" href="{{ route('about') }}"><font size="5px"><b>去逛逛</b></font></a>
                         </div>
                         <div class="carts">
-                            <a class="reservations" href="{{ route('room') }}"><font size="5px"><b>線上訂房</b></font></a>
+                            <a class="reservation" href="{{ route('room') }}"><font size="5px"><b>線上訂房</b></font></a>
+                        </div>
+                        <div class="carts">
+                            <a class="comment" href="{{ route('comment.index') }}"><font size="5px"><b>留言</b></font></a>
                         </div>
                         <br>
 
