@@ -72,6 +72,7 @@
                                     <option value="1">男性</option>
                                 </select>
 
+
                                 @error('gender')
                                 <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
