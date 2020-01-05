@@ -37,10 +37,11 @@ class CommentController extends Controller
     public function store(Request $request)
     {
         //
-        $comment             = new Comment;
-        $comment->user_id    = $request->user()->id;
-        $comment->content    =$request->comment;
-        $comment->save();
+        Comment::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'comment' => $request->comment,
+        ]);
         return view('comments.commentok');
     }
 
