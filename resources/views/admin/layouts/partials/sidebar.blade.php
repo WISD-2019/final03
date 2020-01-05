@@ -38,9 +38,14 @@
                 <a href="{{ route('admin.dashboard.index') }}"><i class="fa fa-fw fa-dashboard"></i> 主控台</a>
             </li>
             <li>
-                <a href="{{ route('admin.posts.index') }}"><i class="fa fa-fw fa-edit"></i> 人員管理</a>
+                <a href="{{ route('admin.posts.index') }}"><i class="fa fa-fw fa-edit"></i> 管理員管理</a>
             </li>
-
+            <li>
+                <a href="{{ route('admin.reservation.index') }}"><i class="fa fa-fw fa-edit"></i> 訂房管理</a>
+            </li>
+            <li>
+                <a href="{{ route('admin.comments.index') }}"><i class="fa fa-fw fa-edit"></i> 留言管理</a>
+            </li>
         </ul>
     </div>
     <!-- /.navbar-collapse -->

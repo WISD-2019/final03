@@ -67,8 +67,8 @@
                             <label for="gender" class="col-md-4 col-form-label text-md-right">{{ __('Gender') }}</label>
 
                             <div class="col-md-6">
-                                <input id="gender" type="radio" class="form-control @error('gender') is-invalid @enderror" name="gender" value="1" required autocomplete="gender" style="width: 15px; height: 15px">男
-                                <input id="gender" type="radio" class="form-control @error('gender') is-invalid @enderror" name="gender" value="2" required autocomplete="gender" style="width: 15px; height: 15px">女
+                                <input id="gender" type="radio" class="form-control @error('gender') is-invalid @enderror" name="gender" value="0" required autocomplete="gender" style="width: 15px; height: 15px">男
+                                <input id="gender" type="radio" class="form-control @error('gender') is-invalid @enderror" name="gender" value="1" required autocomplete="gender" style="width: 15px; height: 15px">女
 
                                 @error('gender')
                                 <span class="invalid-feedback" role="alert">
