@@ -1,15 +1,34 @@
 @extends('layouts.master')
+
+@section('title', 'Blue Owl-Cart')
+
 @section('content')
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/about/about-01.jpg')">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="page-heading">
+                        <h1>我的購物車</h1>
+                        <span class="subheading">Cart</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
     @php
         $total = 0;
     @endphp
-    <h1>我的購物車</h1>
-    <form action="{{ route('reservation.store') }}" method="post" id="order-form">
+    <form action="{{ route('reservation.store') }}" method="post" id="reservation-form">
         @csrf
+
     <table class="table table-striped">
         <tr>
             <th colspan=2>房型</th>
-            <th nowrap class="text-right">房型單價</th>
+            <th nowrap class="text-right">房間單價</th>
             <th nowrap class="text-center">預定房數</th>
             <th nowrap class="text-right">小計</th>
             <th>功能</th>
@@ -49,11 +68,6 @@
             @php
                 $total+= $cart->room->price * $cart->amount
             @endphp
-        @empty
-            <tr>
-                <td><h1>購物車空無一物</h1></td>
-            </tr>
-        @endforelse
             <tr>
                 <th colspan=4 class="text-right">共計</th>
                 <th nowrap class="text-right">
@@ -61,29 +75,44 @@
                 </th>
                 <th>元</th>
             </tr>
+        @empty
+            <tr>
+                <td><h1>購物車空無一物</h1></td>
+            </tr>
+            <tr>
+                <th colspan=4 class="text-right">共計</th>
+                <th nowrap class="text-right">
+                    <span id="total">{{ $total }}</span>
+                </th>
+                <th>元</th>
+            </tr>
+        @endforelse
     </table>
-        <label class="col-form-label col-sm-3 text-md-right">入住日期</label>
-        <div class="col-sm-7">
-            <input type="date" class="form-control" name="checkin">
-        </div>
-        <label class="col-form-label col-sm-3 text-md-right">退房日期</label>
-        <div class="col-sm-7">
-            <input type="date" class="form-control" name="checkout">
-        </div>
-        <label class="col-form-label col-sm-3 text-md-right">需求：</label>
-        <div class="col-sm-7">
-            <input type="text" class="form-control" name="need">
-        </div>
-        <label class="col-form-label col-sm-3 text-md-right">優惠碼：</label>
-        <div class="col-sm-7">
-            <input type="text" class="form-control" name="discount">
-        </div>
-        <div class="form-group row">
-            <div class="col-sm-2">
-                <button type="submit" class="btn btn-primary">送出訂單</button>
+        @if(count(auth()->user()->cart))
+            <div class="form-group row">
+                <label class="col-form-label col-sm-3 text-md-right">入住日期</label>
+                <div class="col-sm-7">
+                    <input type="date" class="form-control checkin" name="checkin" id="checkin">
+                </div>
+                <label class="col-form-label col-sm-3 text-md-right">退房日期</label>
+                <div class="col-sm-7">
+                    <input type="date" class="form-control checkout" name="checkout" id="checkout">
+                </div>
+                <label class="col-form-label col-sm-3 text-md-right">需求：</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" name="need">
+                </div>
+                <label class="col-form-label col-sm-3 text-md-right">優惠碼：</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" name="discount">
+                </div>
+                <div class="col-sm-2">
+                    <button type="submit" class="btn btn-primary">送出訂單</button>
+                </div>
             </div>
-        </div>
+        @endif
     </form>
+
 @endsection
 
 @section('scriptsAfterJs')
@@ -112,6 +141,7 @@
             var cartid = $(this).data('cartid');
             var sum = $(this).val() * $('#price-'+cartid).text();
             $('#sum-'+cartid).text(sum);
+
             var total = 0;
             $('.sum').each(function() {
                 total += Number($(this).text());
