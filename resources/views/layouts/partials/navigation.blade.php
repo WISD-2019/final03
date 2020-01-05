@@ -9,12 +9,6 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('cart.index') }}">我的購物車</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('reservation.index') }}">我的訂單</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="{{ route('about') }}">關於我們</a>
                 </li>
                 <li class="nav-item">
