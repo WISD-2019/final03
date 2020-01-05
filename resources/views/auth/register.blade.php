@@ -67,8 +67,11 @@
                             <label for="gender" class="col-md-4 col-form-label text-md-right">{{ __('Gender') }}</label>
 
                             <div class="col-md-6">
-                                <input id="gender" type="radio" class="form-control @error('gender') is-invalid @enderror" name="gender" value="0" required autocomplete="gender" style="width: 15px; height: 15px">男
-                                <input id="gender" type="radio" class="form-control @error('gender') is-invalid @enderror" name="gender" value="1" required autocomplete="gender" style="width: 15px; height: 15px">女
+                                <select id="gender" name="gender" class="form-control @error('gender') is-invalid @enderror" required autocomplete="gender" value="{{ old('gender') }}">
+                                    <option value="0">女性</option>
+                                    <option value="1">男性</option>
+                                </select>
+
 
                                 @error('gender')
                                 <span class="invalid-feedback" role="alert">
@@ -152,7 +155,7 @@
                             <label for="type" class="col-md-4 col-form-label text-md-right">{{ __('Type') }}</label>
 
                             <div class="col-md-6">
-                                <input id="type" type="text" class="form-control @error('type') is-invalid @enderror" name="type" value="{{ old('type') }}" required autocomplete="type">
+                                <input id="type" type="checkbox" class="form-control @error('type') is-invalid @enderror" name="type" value="1" required autocomplete="gender" style="width: 15px; height: 15px">使用者
 
                                 @error('type')
                                 <span class="invalid-feedback" role="alert">
