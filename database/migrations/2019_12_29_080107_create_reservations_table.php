@@ -17,8 +17,8 @@ class CreateReservationsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->dateTime('checkin');
-            $table->dateTime('checkout');
+            $table->dateTime('checkin')->nullable(true);
+            $table->dateTime('checkout')->nullable(true);
             $table->dateTime('book_start')->nullable(true);
             $table->dateTime('book_end')->nullable(true);
             $table->dateTime('cancel')->nullable(true);
