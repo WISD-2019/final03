@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'About')
+@section('title', 'Blue Owl-About')
 
 @section('content')
 
