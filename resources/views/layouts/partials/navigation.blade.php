@@ -12,6 +12,9 @@
                     <a class="nav-link" href="{{ route('about') }}">關於我們</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{{ route('room') }}">線上訂房</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{{ route('post') }}">最新消息</a>
                 </li>
                 <li class="nav-item">
@@ -20,7 +23,7 @@
                 <li class="nav-item">
                     @if (Route::has('login'))
                         @auth
-                            <a href="{{ url('/home') }}">Home</a>
+                            <a href="{{ url('/home') }}">{{ Auth::user()->name }} 您好！</a>
                         @else
                             <a href="{{ route('login') }}">登入</a>
                             @if (Route::has('register'))
