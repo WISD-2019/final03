@@ -25,6 +25,14 @@
                     @csrf
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls">
+                            <label>Name</label>
+                            <input type="text" class="form-control" placeholder="Name" name="name" required data-validation-required-message="Please enter your name.">
+                        </div>
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Email</label>
+                            <input type="text" class="form-control" placeholder="Email" name="email" required data-validation-required-message="Please enter your email.">
+                        </div>
+                        <div class="form-group floating-label-form-group controls">
                             <label>Message</label>
                             <input type="text" class="form-control" placeholder="Comment" name="comment" required data-validation-required-message="Please enter your comment.">
                         </div>
