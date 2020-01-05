@@ -14,7 +14,17 @@
                         </div>
                     @endif
 
-                    <font size="5px"><b>工作列表</b></font>
+                     <font size="5px"><b>工作列表</b></font>
+                        <hr>
+                        <div class="carts">
+                            <a class="reservations" href="{{ route('about') }}"><font size="5px"><b>去逛逛</b></font></a>
+                        </div>
+                        <div class="carts">
+                            <a class="reservations" href="{{ route('room') }}"><font size="5px"><b>線上訂房</b></font></a>
+                        </div>
+                        <br>
+
+                    <font size="5px"><b>我的資料</b></font>
                         <hr>
 
                     <div class="carts">
@@ -23,6 +33,8 @@
                     <div class="carts">
                         <a class="reservations" href="{{ route('reservation.index') }}"><font size="5px"><b>我的訂單記錄　→</b></font></a>
                     </div>
+
+
                 </div>
             </div>
         </div>
