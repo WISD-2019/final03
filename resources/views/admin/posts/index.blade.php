@@ -47,7 +47,7 @@
                 @foreach($users as $user)
                     <tr >
                         <td style="text-align: center">{{ $user->id }}</td>
-                        <td style="text-align: center">{{ $user->job_name?'一般管理員':'總管理員'}}</td>
+                        <td style="text-align: center">{{ $user->job_name?'一般員工':'總管理員'}}</td>
                         <td style="text-align: center">{{ $user->name }}</td>
                         <td style="text-align: center">{{ $user->gender?'女':'男'}}</td>
                         <td style="text-align: center">{{ $user->birthday }}</td>

@@ -32,7 +32,7 @@
                 <label>職位：</label>
                 <select name="job_name" class="form-control">
                     <option value="0" {{$post->job_name?'':'SELECTED' }}>總管理員</option>
-                    <option value="1" {{$post->job_name?'SELECTED':'' }}>一般管理員</option>
+                    <option value="1" {{$post->job_name?'SELECTED':'' }}>一般員工</option>
                 </select>
             </div>
 
@@ -74,6 +74,7 @@
 
             <div class="text-right">
                 <button type="submit" class="btn btn-success" style="background-color: #6f42c1;border-color: #6f42c1">更新</button>
+                <button type="RESET" class="btn btn-success" style="background-color: #6f42c1;border-color: #6f42c1">重新填寫</button>
             </div>
 
         </form>
