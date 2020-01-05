@@ -71,4 +71,25 @@ Route::group(['prefix' => 'admin'], function() {
     Route::post('posts',['as'=>'admin.posts.store','uses'=> 'UsersController@store']);
     //單元練習< 練習7-1> 設定所需的 Route
     Route::delete('posts/{id}'  , ['as' => 'admin.posts.destroy', 'uses' => 'UsersController@destroy']);
+
+    Route::get('reservation'          , ['as' => 'admin.reservation.index' , 'uses' => 'ReservationsController@index']);
+    Route::get('reservation/create'   , ['as' => 'admin.reservation.create', 'uses' => 'ReservationsController@create']);
+    Route::get('reservation/{id}/edit', ['as' => 'admin.reservation.edit'  , 'uses' => 'ReservationsController@edit']);
+    //單元練習< 練習6-4> 設定更新所需的 Route
+    Route::patch('reservation/{id}',    ['as' => 'admin.reservation.update', 'uses' => 'ReservationsController@update']);
+    //單元練習< 練習4-3> 開啟新增的Route
+    Route::post('reservation',['as'=>'admin.reservation.store','uses'=> 'ReservationsController@store']);
+    //單元練習< 練習7-1> 設定所需的 Route
+    Route::delete('reservation/{id}'  , ['as' => 'admin.reservation.destroy', 'uses' => 'ReservationsController@destroy']);
+
+    Route::get('comments'          , ['as' => 'admin.comments.index' , 'uses' => 'CommentsController@index']);
+    Route::get('comments/create'   , ['as' => 'admin.comments.create', 'uses' => 'CommentsController@create']);
+    Route::get('comments/{id}/edit', ['as' => 'admin.comments.edit'  , 'uses' => 'CommentsController@edit']);
+    //單元練習< 練習6-4> 設定更新所需的 Route
+    Route::patch('comments/{id}',    ['as' => 'admin.comments.update', 'uses' => 'CommentsController@update']);
+    //單元練習< 練習4-3> 開啟新增的Route
+    Route::post('comments',['as'=>'admin.comments.store','uses'=> 'CommentsController@store']);
+    //單元練習< 練習7-1> 設定所需的 Route
+    Route::delete('comments/{id}'  , ['as' => 'admin.comments.destroy', 'uses' => 'CommentsController@destroy']);
+
 });
