@@ -37,7 +37,6 @@
                         <a class="reservations" href="{{ route('reservation.index') }}"><font size="5px"><b>我的訂單記錄　→</b></font></a>
                     </div>
 
-
                 </div>
             </div>
         </div>

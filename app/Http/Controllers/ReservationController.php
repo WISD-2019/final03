@@ -19,9 +19,9 @@ class ReservationController extends Controller
     {
         //
         $reservations = Reservation::where('user_id', $request->user()->id)->get();
-        return view('reservation.index', [
-            'reservations' => $reservations,
-        ]);
+        $items =Item::all();
+        $date=['reservations'=>$reservations,'items'=>$items];
+        return view('reservation.index', $date);
     }
 
     /**
@@ -90,7 +90,10 @@ class ReservationController extends Controller
      */
     public function show(Reservation $reservation)
     {
-        //
+        $items =Item::all();
+        $rooms =Room::all();
+        $date=['reservations'=>$reservation,'items'=>$items,'rooms'=>$rooms];
+        return view('reservation.show', $date);
     }
 
     /**

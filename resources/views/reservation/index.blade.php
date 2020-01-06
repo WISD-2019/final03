@@ -1,42 +1,54 @@
 @extends('layouts.master')
-@section('title', 'Blue Owl')
+
+@section('title', 'Blue Owl-Reservation List')
+
 @section('content')
 
-    <div class="py-5 text-center">
-        <h2>訂單查詢</h2>
-    </div>
-    {{ csrf_field() }}
-    <div class="panel panel-default">
-
-
-        <div class="panel-body">
-            <table class="table table-striped task-table">
-
-                <!-- 表頭 -->
-                <thead>
-                <th>過去訂單</th>
-                <th>&nbsp;</th>
-                </thead>
-
-                <!-- 表身 -->
-                <tbody>
-                @foreach ($reservations as $reservations)
-                    <tr>
-                        <!-- 任務名稱 -->
-                        <td class="table-text">
-                            <div>訂單編號:000{{ $reservations->id }}</div>
-                            <div>入住日期:{{ $reservations->checkin }}</div>
-                            <div>退房日期:{{ $reservations->checkout }}</div>
-                            <div>總金額:{{ $reservations->total }}元</div>
-                        </td>
-                    </tr>
-                @endforeach
-                </tbody>
-            </table>
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/reservationbg.jpg')">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="site-heading">
+                        <h1>我的訂房記錄</h1>
+                        <span class="subheading">Reservation List</span>
+                    </div>
+                </div>
+            </div>
         </div>
+    </header>
+
+    <h3>共 {{count($reservations)}} 筆訂房記錄</h3>
+    <div class="card-body">
+        <table class="table table-striped">
+            <tr>
+                <th nowrap class="text-left">訂單編號</th>
+                <th nowrap class="text-center">訂單日期</th>
+                <th nowrap class="text-right">訂單狀態</th>
+            </tr>
+            @forelse($reservations as $reservation)
+                <tr>
+                    <td class="text-left">
+                        <a href="reservation/{{ $reservation->id }}"> 00{{ $reservation->id }}</a>
+                    </td>
+                    <td class="text-center">{{ $reservation->created_at}}</td>
+                    <td class="text-right">
+                        <span class="float-right">
+                            @if($reservation->closed)
+                                已完成
+                            @else
+                                處理中
+                            @endif
+                        </span>
+                    </td>
+                </tr>
+
+            @empty
+                <div class="alert alert-info">
+                    <h2>尚無訂單</h2>
+                </div>
+            @endforelse
+        </table>
     </div>
-
-
-    </div>
-
 @endsection
