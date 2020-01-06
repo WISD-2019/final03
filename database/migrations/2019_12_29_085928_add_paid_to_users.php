@@ -15,7 +15,7 @@ class AddPaidToUsers extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->boolean('gender');
-            $table->boolean('job_name');
+            $table->string('job_name')->nullable(true);
             $table->string('postal_code')->nullable(true);
             $table->string('address')->nullable(true);
             $table->date('birthday');

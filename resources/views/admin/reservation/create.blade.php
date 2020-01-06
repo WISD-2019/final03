@@ -31,12 +31,15 @@
             <div class="form-group">
                 <label>姓名：</label>
                 <input name="user_id" class="form-control" placeholder="請輸入訂房人姓名">
+{{--                <select name="user_id" class="form-control" id="user_id-{{ $reservation->user_id }}">--}}
+{{--                    <option value="{{ $reservation->user_id }}">{{ $reservation->user->name }}</option>--}}
+{{--                </select>--}}
             </div>
 
             <div class="form-group">
                 <label>性別：</label><br>
-                <input type="radio" name="gender" value="0"> 男<br>
-                <input type="radio" name="gender" value="1"> 女<br>
+                <input type="radio" name="gender" value="1"> 男<br>
+                <input type="radio" name="gender" value="0"> 女<br>
             </div>
 
             <div class="form-group">
@@ -56,9 +59,9 @@
 
             <div class="form-group" action="/admin/reservation/index" method="POST">
                 <label>房型：</label><br>
-                <input type="checkbox" name="type[]" value="房型1"><label>房型1</label>
-                <input type="checkbox" name="type[]" value="房型2"><label>房型2</label>
-                <input type="checkbox" name="type[]" value="房型3"><label>房型3</label>
+                <input type="checkbox" name="room_id[]" value="1"><label>房型1</label>
+                <input type="checkbox" name="room_id[]" value="2"><label>房型2</label>
+                <input type="checkbox" name="room_id[]" value="3"><label>房型3</label>
             </div>
 
             <div class="form-group">

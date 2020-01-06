@@ -48,54 +48,46 @@
                     </tr>
                 </thead>
                 <tbody>
-                @foreach($reservations as $reservation)
-                    <tr >
-                        <td style="text-align: center">{{ $reservation->id }}</td>
-                        <td style="text-align: center">
-                            <span id="name-{{ $reservation->user_id }}">
-                                {{ $reservation->user->name }}
-                            </span>
-                        </td>
-                        <td style="text-align: center"><?php
+            @foreach($reservations as $reservation)
+                @foreach($items as $item)
+                    @if($item->reservation_id == $reservation->id)
+                         @foreach($rooms as $room)
+                             @if($item->room_id == $room->id)
+                                <tr >
+                                <td style="text-align: center">{{ $reservation->id }}</td>
+                                <td style="text-align: center">
+                                    <span id="name-{{ $reservation->user_id }}">
+                                        {{ $reservation->user->name }}
+                                    </span>
+                                </td>
+                                <td style="text-align: center">{{ $room->type }}</td>
+                                <td style="text-align: center">{{ $reservation->checkin }}</td>
+                                <td style="text-align: center">{{ $reservation->checkout }}</td>
+                                <td style="text-align: center">{{ $reservation->book_start }}</td>
+                                <td style="text-align: center">{{ $reservation->book_end }}</td>
+                                <td style="text-align: center">{{ $reservation->created_at }}</td>
+                                <td style="text-align: center">{{ $reservation->cancel }}</td>
+                                <td style="text-align: center">{{ $reservation->discount }}</td>
+                                <td style="text-align: center">{{ $reservation->total }}</td>
+                                <td style="text-align: center">{{ $reservation->need }}</td>
+                                <td style="text-align: center">{{ $reservation->status?'已取消':'預約中'}}</td>
+                                <td style="text-align: center">
+                                    <a href="{{route('admin.reservation.edit',$reservation->id)}}">編輯</a>
+                                    /
+                                    <form action="{{ route('admin.reservation.destroy', $reservation->id) }}" method="POST">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
 
-                            $type = array ("房型1", "房型2", "房型3");
-
-                            foreach($type as $value) {
-                                echo $value. "<br>\n";
-                            }
-
-                            ?>
-<!--                            --><?php
-//                            if(isset($_POST['type'])) {
-//                                foreach($_POST['type'] as $key => $value) {
-//                                    echo "{$value}<br />";
-//                                }
-//                            }
-//                            ?>
-                        </td>
-                        <td style="text-align: center">{{ $reservation->checkin }}</td>
-                        <td style="text-align: center">{{ $reservation->checkout }}</td>
-                        <td style="text-align: center">{{ $reservation->book_start }}</td>
-                        <td style="text-align: center">{{ $reservation->book_end }}</td>
-                        <td style="text-align: center">{{ $reservation->created_at }}</td>
-                        <td style="text-align: center">{{ $reservation->cancel }}</td>
-                        <td style="text-align: center">{{ $reservation->discount }}</td>
-                        <td style="text-align: center">{{ $reservation->total }}</td>
-                        <td style="text-align: center">{{ $reservation->need }}</td>
-                        <td style="text-align: center">{{ $reservation->status?'已取消':'預約中'}}</td>
-                        <td style="text-align: center">
-                            <a href="{{route('admin.reservation.edit',$reservation->id)}}">編輯</a>
-                            /
-                            <form action="{{ route('admin.reservation.destroy', $reservation->id) }}" method="POST">
-                                {{ csrf_field() }}
-                                {{ method_field('DELETE') }}
-
-                                <button class="btn btn-link" style="color: red">刪除</button>
-                            </form>
-                        </td>
-                    </tr>
+                                        <button class="btn btn-link" style="color: red">刪除</button>
+                        </form>
+                    </td>
+                </tr>
+                             @endif
+                         @endforeach
+                    @endif
                 @endforeach
-                </tbody>
+            @endforeach
+            </tbody>
             </table>
         </div>
     </div>

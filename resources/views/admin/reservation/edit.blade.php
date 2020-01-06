@@ -37,8 +37,8 @@
 
                 <div class="form-group">
                     <label>性別：</label><br>
-                    <input type="radio" name="gender" value="0" {{$post->gender?'':'SELECTED' }}> 男<br>
-                    <input type="radio" name="gender" value="1" {{$post->gender?'SELECTED':'' }}> 女<br>
+                    <input type="radio" name="gender" value="0" {{$post->gender?'':'SELECTED' }}> 女<br>
+                    <input type="radio" name="gender" value="1" {{$post->gender?'SELECTED':'' }}> 男<br>
                 </div>
 
                 <div class="form-group">

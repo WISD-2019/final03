@@ -30,10 +30,7 @@
 
             <div class="form-group">
                 <label>職位：</label>
-                <select name="job_name" class="form-control">
-                    <option value="0" {{$post->job_name?'':'SELECTED' }}>總管理員</option>
-                    <option value="1" {{$post->job_name?'SELECTED':'' }}>一般員工</option>
-                </select>
+                <input name="job_name" class="form-control" placeholder="請輸入職位" value="{{$post->job_name }}">
             </div>
 
             <div class="form-group">
@@ -43,8 +40,8 @@
 
             <div class="form-group">
                 <label>性別：</label><br>
-                <input type="radio" name="gender" value="0" {{$post->gender?'':'checked' }}> 男<br>
-                <input type="radio" name="gender" value="1" {{$post->gender?'checked':'' }}> 女<br>
+                <input type="radio" name="gender" value="0" {{$post->gender?'':'checked' }}> 女<br>
+                <input type="radio" name="gender" value="1" {{$post->gender?'checked':'' }}> 男<br>
             </div>
 
             <div class="form-group">
