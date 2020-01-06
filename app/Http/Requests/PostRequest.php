@@ -26,7 +26,6 @@ class PostRequest extends FormRequest
     {
         return [
             //單元2 < 練習2-2> 設定 rules() 內回傳的驗證陣列
-            'job_name'=>'required|boolean',
             'name'=>'required',
             'gender'=>'required|boolean',
             'birthday'=>'required',

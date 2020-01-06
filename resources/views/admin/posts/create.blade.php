@@ -29,11 +29,6 @@
             {{ csrf_field() }}
 
             <div class="form-group">
-                <label>職位：</label>
-                <input name="job_name" class="form-control" placeholder="請填入職位">
-            </div>
-
-            <div class="form-group">
                 <label>姓名：</label>
                 <input name="name" class="form-control" placeholder="請填入管理員姓名">
             </div>
