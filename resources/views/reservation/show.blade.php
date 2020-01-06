@@ -30,6 +30,8 @@
                 處理中
             @endif
         </span>
+        <br>
+        入住日期：{{ $reservations->checkin}} / 退房日期：{{ $reservations->checkout}}
     </div>
     @foreach($items as $item)
         @if($item->reservation_id == $reservations->id)

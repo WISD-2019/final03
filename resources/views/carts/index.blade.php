@@ -177,7 +177,7 @@
             var cartid = $(this).data('cartid');
             var sum = $(this).val() * $('#price-'+cartid).text();
             $('#sum-'+cartid).text(sum);
-            
+
             var total = 0;
             $('.sum').each(function() {
                 total += Number($(this).text());
