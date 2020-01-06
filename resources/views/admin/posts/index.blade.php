@@ -45,6 +45,7 @@
                 </thead>
                 <tbody>
                 @foreach($users as $user)
+                    @if($user->job_name == "管理者")
                     <tr >
                         <td style="text-align: center">{{ $user->id }}</td>
                         <td style="text-align: center">{{ $user->job_name}}</td>
@@ -66,6 +67,7 @@
                             </form>
                         </td>
                     </tr>
+                                @endif
                 @endforeach
                 </tbody>
             </table>
