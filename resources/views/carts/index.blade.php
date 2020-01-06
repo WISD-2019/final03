@@ -23,10 +23,10 @@
         $total = 0;
         $error='';
     @endphp
-    <h2>請先選擇入住及退房日期</h2>
     <form action="{{ route('reservation.store') }}" method="post" id="reservation-form">
         @csrf
         @if(count(auth()->user()->cart))
+            <h2>請先選擇入住及退房日期</h2>
             <table class="table table-striped">
                 <tr>
                     <th nowrap class="text-left">入住日期</th>
@@ -55,8 +55,8 @@
                     </td>
                 </tr>
             </table>
+            <hr>
         @endif
-        <hr>
         <h2>購物車內容</h2>
         <table class="table table-striped">
             <tr>
@@ -114,9 +114,9 @@
                 <th>元</th>
             </tr>
         </table>
-        <hr>
-        <h2>其它</h2>
         @if(count(auth()->user()->cart))
+            <hr>
+            <h2>其它</h2>
             <table class="table table-striped">
                 <tr>
                     <th nowrap class="text-left">需求：</th>
@@ -174,21 +174,34 @@
             });
         });
         $('.amount').change(function () {
+            var checkin =document.getElementById("checkin").value;
+            var checkout =document.getElementById("checkout").value;
             var cartid = $(this).data('cartid');
             var sum = $(this).val() * $('#price-'+cartid).text();
             $('#sum-'+cartid).text(sum);
 
-            var total = 0;
-            $('.sum').each(function() {
-                total += Number($(this).text());
-            });
-            total= total*day;
-            $('#total').text(total);
+            if(checkin>=checkout){
+                $('#total').text('入住及退房時間有誤');
+            }
+            else{
+                var day=Date.parse(checkout)-Date.parse(checkin);
+                day = day/(1000*60*60*24);
+
+                var total = 0;
+                $('.sum').each(function() {
+                    total += Number($(this).text());
+                });
+                total= total*day;
+                $('#total').text(total);
+            }
         });
         $('.checkin').change(function () {
             var checkin =document.getElementById("checkin").value;
             var checkout =document.getElementById("checkout").value;
-            var day=Date.parse(checkout)-Date.parse(checkin);
+            var cartid = $(this).data('cartid');
+            var sum = $(this).val() * $('#price-'+cartid).text();
+            $('#sum-'+cartid).text(sum);
+
             if(checkin>=checkout){
                 $('#total').text('入住及退房時間有誤');
             }
@@ -207,6 +220,10 @@
         $('.checkout').change(function () {
             var checkin =document.getElementById("checkin").value;
             var checkout =document.getElementById("checkout").value;
+            var cartid = $(this).data('cartid');
+            var sum = $(this).val() * $('#price-'+cartid).text();
+            $('#sum-'+cartid).text(sum);
+
             if(checkin>=checkout){
                 $('#total').text('入住及退房時間有誤');
             }
