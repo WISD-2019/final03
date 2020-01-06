@@ -59,9 +59,9 @@
 
             <div class="form-group" action="/admin/reservation/index" method="POST">
                 <label>房型：</label><br>
-                <input type="checkbox" name="type[]" value="房型1"><label>房型1</label>
-                <input type="checkbox" name="type[]" value="房型2"><label>房型2</label>
-                <input type="checkbox" name="type[]" value="房型3"><label>房型3</label>
+                <input type="checkbox" name="room_id[]" value="1"><label>房型1</label>
+                <input type="checkbox" name="room_id[]" value="2"><label>房型2</label>
+                <input type="checkbox" name="room_id[]" value="3"><label>房型3</label>
             </div>
 
             <div class="form-group">

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Item;
+use App\Room;
 use App\Reservations;
 use Illuminate\Http\Request;
 use App\Http\Requests\ReservationRequest;
@@ -17,7 +19,10 @@ class ReservationsController extends Controller
     public function index()
     {
         $reservations=Reservations::orderBy('id', 'ASC')->get();
-        $data=['reservations'=>$reservations];
+        $items=Item::all();
+        $rooms=Room::orderBy('id', 'ASC')->get();
+
+        $data=['reservations'=>$reservations,'items'=>$items,'rooms'=>$rooms];
         return view('admin.reservation.index', $data);    }
 
     /**
