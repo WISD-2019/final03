@@ -92,6 +92,7 @@
                     <a href="{{ route('room') }}">線上訂房</a>
                     <a href="{{ route('post') }}">最新消息</a>
                     <a href="{{ route('traffic') }}">交通資訊</a>
+                    <a href="{{ route('comment.index') }}">訪客留言</a>
                 </div>
             </div>
         </div>

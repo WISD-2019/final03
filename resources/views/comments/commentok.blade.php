@@ -22,7 +22,7 @@
             <div class="col-lg-8 col-md-10 mx-auto">
                 <p>我們已收到您的意見!</p>
                 <div class="form-group">
-                    <a href="{{ route('index') }}"><button type="submit">回首頁</button></a>
+                    <a href="{{ route('about') }}"><button type="submit" class="btn btn-primary" id="sendMessageButton">回首頁</button></a>
                 </div>
             </div>
         </div>

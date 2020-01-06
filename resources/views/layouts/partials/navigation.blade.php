@@ -21,6 +21,9 @@
                     <a class="nav-link" href="{{ route('traffic') }}">交通資訊</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{{ route('comment.index') }}">訪客留言</a>
+                </li>
+                <li class="nav-item">
                     @if (Route::has('login'))
                         @auth
                             <a href="{{ url('/home') }}">{{ Auth::user()->name }} 您好！</a>
