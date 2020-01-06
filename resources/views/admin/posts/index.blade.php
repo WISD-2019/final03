@@ -31,8 +31,8 @@
             <table class="table table-bordered table-hover">
                 <thead>
                     <tr>
-                        <th width="150" style="text-align: center">管理員編號</th>
-                        <th width="150" style="text-align: center">職位</th>
+                        <th width="200" style="text-align: center">管理員編號</th>
+                        <th width="200" style="text-align: center">職位</th>
                         <th width="150" style="text-align: center">姓名</th>
                         <th width="100" style="text-align: center">性別</th>
                         <th width="150" style="text-align: center">生日</th>
@@ -47,9 +47,9 @@
                 @foreach($users as $user)
                     <tr >
                         <td style="text-align: center">{{ $user->id }}</td>
-                        <td style="text-align: center">{{ $user->job_name?'一般員工':'總管理員'}}</td>
+                        <td style="text-align: center">{{ $user->job_name}}</td>
                         <td style="text-align: center">{{ $user->name }}</td>
-                        <td style="text-align: center">{{ $user->gender?'女':'男'}}</td>
+                        <td style="text-align: center">{{ $user->gender?'男':'女'}}</td>
                         <td style="text-align: center">{{ $user->birthday }}</td>
                         <td style="text-align: center">{{ $user->id_number }}</td>
                         <td style="text-align: center">{{ $user->phone }}</td>
@@ -62,7 +62,7 @@
                                 {{ csrf_field() }}
                                 {{ method_field('DELETE') }}
 
-                                <button class="btn btn-link">刪除</button>
+                                <button class="btn btn-link" style="color: red">刪除</button>
                             </form>
                         </td>
                     </tr>

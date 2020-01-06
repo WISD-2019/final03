@@ -31,12 +31,15 @@
             <div class="form-group">
                 <label>姓名：</label>
                 <input name="user_id" class="form-control" placeholder="請輸入訂房人姓名">
+{{--                <select name="user_id" class="form-control" id="user_id-{{ $reservation->user_id }}">--}}
+{{--                    <option value="{{ $reservation->user_id }}">{{ $reservation->user->name }}</option>--}}
+{{--                </select>--}}
             </div>
 
             <div class="form-group">
                 <label>性別：</label><br>
-                <input type="radio" name="gender" value="0"> 男<br>
-                <input type="radio" name="gender" value="1"> 女<br>
+                <input type="radio" name="gender" value="1"> 男<br>
+                <input type="radio" name="gender" value="0"> 女<br>
             </div>
 
             <div class="form-group">

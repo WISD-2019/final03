@@ -30,10 +30,7 @@
 
             <div class="form-group">
                 <label>職位：</label>
-                <select name="job_name" class="form-control">
-                    <option value="0">總管理員</option>
-                    <option value="1">一般員工</option>
-                </select>
+                <input name="job_name" class="form-control" placeholder="請填入職位">
             </div>
 
             <div class="form-group">
@@ -43,8 +40,8 @@
 
             <div class="form-group">
                 <label>性別：</label><br>
-                    <input type="radio" name="gender" value="0"> 男<br>
-                    <input type="radio" name="gender" value="1"> 女<br>
+                    <input type="radio" name="gender" value="1"> 男<br>
+                    <input type="radio" name="gender" value="0"> 女<br>
             </div>
 
             <div class="form-group">
