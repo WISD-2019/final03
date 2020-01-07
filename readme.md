@@ -19,7 +19,7 @@
 ## 系統的主要功能
 前台
 
-- 最新消息(Route::get('post', function () {return view('bootstarap.post');})) 3A632068 彭惠昕(https://github.com/3A632068)
+- 最新消息(Route::get('post', function () {return view('bootstarap.post');})) [3A632068 彭惠昕](https://github.com/3A632068)
 -
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
