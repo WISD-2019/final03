@@ -11,9 +11,9 @@
 
 線上訂房系統
 
-    - 讓使用者透過此系統的簡單操作就可進行線上訂房
-    - 讓使用者了解民宿
-    - 讓管理者在一套系統裡就可管控所有顧客及訂房資料
+   - 讓使用者透過此系統的簡單操作就可進行線上訂房
+   - 讓使用者了解民宿
+   - 讓管理者在一套系統裡就可管控所有顧客及訂房資料
 
 
 ## 系統的主要功能
@@ -35,10 +35,12 @@
 - 訂房管理   [3A632055 姚佳心](https://github.com/3A632055)
 - 留言管理   [3A632055 姚佳心](https://github.com/3A632055)
 
-// 後台
-。Route::group(['prefix' => 'admin'], function() {
-    。//主控台後台
-    。Route::get('/', ['as' => 'admin.dashboard.index', 'uses' => 'AdminDashboardController@index']);
+- // 後台
+
+- Route::group(['prefix' => 'admin'], function() {
+
+   - //主控台後台
+    Route::get('/', ['as' => 'admin.dashboard.index', 'uses' => 'AdminDashboardController@index']);
 
     //管理員管理後台
     //後台管理員管理首頁
@@ -113,6 +115,7 @@
 1. 複製https://github.com/WISD-2019/final03.git 本系統在GitHub的專案，打開Source tree，點選clone後，輸入以下資料
 
     。Source Path:https://github.com/WISD-2019/final03.git
+    
     。Destination Path:C:\wagon\uwamp\www\final03
 
 2. 打開cmder，切換至專案所在資料夾，cd final03
@@ -157,21 +160,22 @@
 
 前台-使用者
 
-    - 帳號:s3a632055@gm.student.ncut.edu.tw
+   - 帳號:s3a632055@gm.student.ncut.edu.tw
 
-    - 密碼:3a632055
+   - 密碼:3a632055
 
-    - 帳號:s3a632068@gm.student.ncut.edu.tw
+   - 帳號:s3a632068@gm.student.ncut.edu.tw
 
-    - 密碼:3a632068
+   - 密碼:3a632068
 
 後台-管理者
 
-    - 帳號:test0000@gmail.com
-    - 密碼:test0000
+   - 帳號:test0000@gmail.com
+   
+   - 密碼:test0000
 
 ## 系統開發人員
 
-    -  [3A632055 姚佳心](https://github.com/3A632055)
+   -  [3A632055 姚佳心](https://github.com/3A632055)
 
-    -  [3A632068 彭惠昕](https://github.com/3A632068)
+   -  [3A632068 彭惠昕](https://github.com/3A632068)
