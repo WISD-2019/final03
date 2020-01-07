@@ -72,7 +72,7 @@ class ReservationController extends Controller
             }
 
             // 更新訂單總金額
-            $reservation->total = $total;
+            $reservation->total = $total *((strtotime($reservation-> checkout) - strtotime($reservation-> checkin))/ (60*60*24));
             $reservation->update();
 
             // 將下單的商品從購物車中移除
