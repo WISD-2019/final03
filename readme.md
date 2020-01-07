@@ -1,30 +1,39 @@
 ## ◆在房型一覽可看到使用者想預約住宿的房型
 ![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/%E8%A8%82%E6%88%BF.png)
    
+------------------------------------------------------------------
 ## ◆選擇好房型、入住日期、退房日期及數量後，加入購物車內
 ![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/%E8%B3%BC%E7%89%A9%E8%BB%8A.png)
 
+------------------------------------------------------------------
 ## ◆顯示使用者的訂房紀錄
 ![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/%E8%A8%82%E6%88%BF%E8%A8%98%E9%8C%84.png)
   
+------------------------------------------------------------------
 ## ◆顯示訂單編號的明細   
 ![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/%E8%A8%82%E6%88%BF%E6%98%8E%E7%B4%B0.png)
    
+------------------------------------------------------------------
 ## ◆提供訪客留言區   
 ![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/%E8%A8%AA%E5%AE%A2%E7%95%99%E8%A8%80.png)
   
+------------------------------------------------------------------
 ## ◆後台管理所有管理者的頁面 
 ![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/%E7%AE%A1%E7%90%86%E5%93%A1%E7%AE%A1%E7%90%86.png)
    
+------------------------------------------------------------------
 ## ◆後台管理所有使用者的頁面   
 ![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/%E4%BA%BA%E5%93%A1%E7%AE%A1%E7%90%86.png)
    
+------------------------------------------------------------------
 ## ◆後台管理所有訂房資料的頁面   
 ![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/%E8%A8%82%E6%88%BF%E7%AE%A1%E7%90%86.png)
    
+------------------------------------------------------------------
 ## ◆後台管理所有留言資料的頁面  
 ![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/%E7%95%99%E8%A8%80%E7%AE%A1%E7%90%86.png)
    
+------------------------------------------------------------------
 
 ## 系統的名稱及作用
 
@@ -35,7 +44,7 @@
    - 讓管理者在一套系統裡就可管控所有顧客及訂房資料
 
 
-## 系統的主要功能
+## 系統的主要功能 (列出每一功能及相對應的路由)
 ★ 前台
 
 - 最新消息(Route::get('post', function () {return view('bootstarap.post');}))   [3A632068 彭惠昕](https://github.com/3A632068)
@@ -103,6 +112,37 @@
 
     });
 
+------------------------------------------------------------------
+
+## ERD
+![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/ERD.png)
+
+------------------------------------------------------------------
+
+## 關聯式綱要圖
+![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/%E7%B6%B1%E8%A6%81%E5%9C%96.png)
+
+------------------------------------------------------------------
+
+## 資料表欄位設計
+![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/users.jpg)
+
+------------------------------------------------------------------
+![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/rooms.jpg)
+
+------------------------------------------------------------------
+![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/reservations.jpg)
+
+------------------------------------------------------------------
+![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/items.jpg)
+
+------------------------------------------------------------------
+![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/carts.jpg)
+
+------------------------------------------------------------------
+![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/comments.jpg)
+
+------------------------------------------------------------------
 
 ## 初始專案與DB負責的同學
 
