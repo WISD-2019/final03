@@ -89,4 +89,7 @@ Route::group(['prefix' => 'admin'], function() {
     //單元練習< 練習7-1> 設定所需的 Route
     Route::delete('comments/{id}'  , ['as' => 'admin.comments.destroy', 'uses' => 'CommentsController@destroy']);
 
+    Route::get('reservationer'          , ['as' => 'admin.reservationer.index' , 'uses' => 'ReservationerController@index']);
+    Route::delete('reservationer/{id}'  , ['as' => 'admin.reservationer.destroy', 'uses' => 'ReservationerController@destroy']);
+
 });
