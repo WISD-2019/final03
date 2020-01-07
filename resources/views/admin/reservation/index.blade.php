@@ -56,9 +56,9 @@
                                 <tr >
                                 <td style="text-align: center">{{ $reservation->id }}</td>
                                 <td style="text-align: center">
-                                    <span id="name-{{ $reservation->user_id }}">
+                                    <a href="{{route('admin.reservationer.index',$reservation->user_id)}}" style="color: rgba(124,5,242,0.9)">
                                         {{ $reservation->user->name }}
-                                    </span>
+                                    </a>
                                 </td>
                                 <td style="text-align: center">{{ $room->type }}</td>
                                 <td style="text-align: center">{{ $reservation->checkin }}</td>
