@@ -72,7 +72,7 @@ composer run‐script post‐root‐package‐install
 composer run‐script post‐create‐project‐cmd
 將專案打開 在.env檔案內輸入資料庫主機IP、Port、名稱、與帳密如下：
 
-DB_HOST=127.0.0.1
+-- DB_HOST=127.0.0.1
 DB_PORT=33060
 DB_DATABASE=final03
 DB_USERNAME=root
@@ -92,18 +92,18 @@ php artisan migrate
 
 前台-使用者
 
-●帳號:s3a632055@gm.student.ncut.edu.tw
+- 帳號:s3a632055@gm.student.ncut.edu.tw
 
-●密碼:3a632055
+- 密碼:3a632055
 
-●帳號:s3a632068@gm.student.ncut.edu.tw
+- 帳號:s3a632068@gm.student.ncut.edu.tw
 
-●密碼:3a632068
+- 密碼:3a632068
 
 後台-管理者
 
-●帳號:test0000@gmail.com
-●密碼:test0000
+- 帳號:test0000@gmail.com
+- 密碼:test0000
 
 ## 系統開發人員
 
