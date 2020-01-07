@@ -35,11 +35,11 @@
 - 訂房管理   [3A632055 姚佳心](https://github.com/3A632055)
 - 留言管理   [3A632055 姚佳心](https://github.com/3A632055)
 
+------------------------------------------------------------------
 
+    Route::group(['prefix' => 'admin'], function() {
 
-  - Route::group(['prefix' => 'admin'], function() {
-
-   - //主控台後台
+    //主控台後台
     Route::get('/', ['as' => 'admin.dashboard.index', 'uses' => 'AdminDashboardController@index']);
 
     //管理員管理後台
@@ -90,7 +90,7 @@
     //後台刪除留言管理資訊
     Route::delete('comments/{id}'  , ['as' => 'admin.comments.destroy', 'uses' => 'CommentsController@destroy']);
 
-});
+    });
 
 
 ## 初始專案與DB負責的同學
