@@ -1,9 +1,32 @@
-<p align="center"><img src="file:///C:/Users/user/Desktop/readme/comment.PNG" width="400"></p>
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
-![image](https://raw.githubusercontent.com/WISD-2019/final03/master/comment.PNG)
+## ◆在房型一覽可看到使用者想預約住宿的房型
+![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/%E8%A8%82%E6%88%BF.png)
+   
+## ◆選擇好房型、入住日期、退房日期及數量後，加入購物車內
+![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/%E8%B3%BC%E7%89%A9%E8%BB%8A.png)
 
+## ◆顯示使用者的訂房紀錄
+![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/%E8%A8%82%E6%88%BF%E8%A8%98%E9%8C%84.png)
+  
+## ◆顯示訂單編號的明細   
+![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/%E8%A8%82%E6%88%BF%E6%98%8E%E7%B4%B0.png)
+   
+## ◆提供訪客留言區   
+![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/%E8%A8%AA%E5%AE%A2%E7%95%99%E8%A8%80.png)
+  
+## ◆後台管理所有管理者的頁面 
+![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/%E7%AE%A1%E7%90%86%E5%93%A1%E7%AE%A1%E7%90%86.png)
+   
+## ◆後台管理所有使用者的頁面   
+![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/%E4%BA%BA%E5%93%A1%E7%AE%A1%E7%90%86.png)
+   
+## ◆後台管理所有訂房資料的頁面   
+![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/%E8%A8%82%E6%88%BF%E7%AE%A1%E7%90%86.png)
+   
+## ◆後台管理所有留言資料的頁面  
+![image](https://raw.githubusercontent.com/WISD-2019/final03/master/pic/%E7%95%99%E8%A8%80%E7%AE%A1%E7%90%86.png)
+   
 
-## 系統的作用
+## 系統的名稱及作用
 
 線上訂房系統
 
@@ -41,14 +64,6 @@
     //管理員管理後台
     //後台管理員管理首頁
     Route::get('posts'          , ['as' => 'admin.posts.index' , 'uses' => 'UsersController@index']);
-    //後台新增管理員管理資訊
-    Route::get('posts/create'   , ['as' => 'admin.posts.create', 'uses' => 'UsersController@create']);
-    //後台編輯管理員管理資訊
-    Route::get('posts/{id}/edit', ['as' => 'admin.posts.edit'  , 'uses' => 'UsersController@edit']);
-    //後台更新管理員管理資訊
-    Route::patch('posts/{id}',    ['as' => 'admin.posts.update', 'uses' => 'UsersController@update']);
-    //後台儲存管理員管理資訊
-    Route::post('posts',['as'=>'admin.posts.store','uses'=> 'UsersController@store']);
     //後台刪除管理員管理資訊
     Route::delete('posts/{id}'  , ['as' => 'admin.posts.destroy', 'uses' => 'UsersController@destroy']);
     
@@ -140,7 +155,7 @@
 
     。php artisan migrate
 
-6.｜ 開啟UwAmp，點選PHPMyAdmin，輸入以下資料後並點擊登入，進入MySQL後，建立新資料庫，名稱為final03，將專案sql資料夾裡的rooms.sql(C:\wagon\uwamp\www\final03\sql\rooms.sql)和users.sql(C:\wagon\uwamp\www\final03\sql\users.sql)匯入
+6.｜ 開啟UwAmp，點選PHPMyAdmin，輸入以下資料後並點擊登入，進入MySQL後，建立新資料庫，名稱為final03，將專案sql資料夾裡的rooms.sql、users.sql、comments.sql、items.sql、reservations.sql匯入
 
     。資料庫系統:MYSQL
 
@@ -170,8 +185,33 @@
    
    - 密碼:test0000
 
-## 系統開發人員
+## 系統開發人員與工作分配
 
    -  [3A632055 姚佳心](https://github.com/3A632055)
+   
+       。後台管理
+       
+          ．主控台
+          ．管理員管理
+          ．使用者管理
+          ．訂房管理
+          ．留言管理
+         
+       。readme的輸入及排版
+
 
    -  [3A632068 彭惠昕](https://github.com/3A632068)
+   
+       。前台管理
+       
+          ．最新消息
+          ．關於我們
+          ．交通
+          ．房型
+          ．房型詳細資料
+          ．留言
+          ．購物車
+       
+       。登入頁面進入前台或後台頁面
+       
+       。readme的輸入及排版
