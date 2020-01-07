@@ -11,16 +11,16 @@
     <title>@yield('title')</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{asset('bootstraps/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('user/bootstraps/css/bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="{{asset('fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('user/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-    <link href="{{asset('css/clean-blog.min.css')}}" rel="stylesheet">
+    <link href="{{asset('user/css/clean-blog.min.css')}}" rel="stylesheet">
 
 </head>
 
@@ -39,11 +39,11 @@
 @include('layouts.partials.footer')
 
 <!-- Bootstrap core JavaScript -->
-<script src="{{asset('jquery/jquery.min.js')}}"></script>
-<script src="{{asset('bootstraps/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('user/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('user/bootstraps/js/bootstrap.bundle.min.js')}}"></script>
 
 <!-- Custom scripts for this template -->
-<script src="{{asset('js/clean-blog.min.js')}}"></script>
+<script src="{{asset('user/js/clean-blog.min.js')}}"></script>
 <script src="{{ mix('js/app.js') }}"></script>
 @yield('scriptsAfterJs')
 </body>
