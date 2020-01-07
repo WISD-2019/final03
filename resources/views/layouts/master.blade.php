@@ -11,7 +11,7 @@
     <title>@yield('title')</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('bootstraps/css/bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
     <link href="{{asset('fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -40,7 +40,7 @@
 
 <!-- Bootstrap core JavaScript -->
 <script src="{{asset('jquery/jquery.min.js')}}"></script>
-<script src="{{asset('bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('bootstraps/js/bootstrap.bundle.min.js')}}"></script>
 
 <!-- Custom scripts for this template -->
 <script src="{{asset('js/clean-blog.min.js')}}"></script>
