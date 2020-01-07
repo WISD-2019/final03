@@ -36,10 +36,6 @@
 - 留言管理 (Route::get('/comments/{room}', 'CommentsController@show'))   [3A632055 姚佳心](https://github.com/3A632055)
 
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
 ## 初始專案與DB負責的同學
 
 
@@ -72,21 +68,30 @@ composer run‐script post‐root‐package‐install
 composer run‐script post‐create‐project‐cmd
 將專案打開 在.env檔案內輸入資料庫主機IP、Port、名稱、與帳密如下：
 
--- DB_HOST=127.0.0.1
-DB_PORT=33060
-DB_DATABASE=final03
-DB_USERNAME=root
-DB_PASSWORD=root
+。DB_HOST=127.0.0.1
+
+。DB_PORT=33060
+
+。DB_DATABASE=final03
+
+。DB_USERNAME=root
+
+。DB_PASSWORD=root
+
 在cmder輸入以下命令，將所有資料表產生至final03資料庫內
 
 php artisan migrate
 開啟UwAmp，點選PHPMyAdmin，輸入以下資料後並點擊登入，進入MySQL後，建立新資料庫，名稱為final03，將final03.sql(C:\wagon\uwamp\www\final03\database\final03.sql)匯入
 
-資料庫系統:MYSQL
-伺服器:localhost:33060
-帳號:root
-密碼:root
-在UwAmp下，點選Apache config，選擇port 8000 ，並在Document Root 輸入{DOCUMENTPATH}/final03/public
+。資料庫系統:MYSQL
+
+。伺服器:localhost:33060
+
+。帳號:root
+
+。密碼:root
+
+。在UwAmp下，點選Apache config，選擇port 8000 ，並在Document Root 輸入{DOCUMENTPATH}/final03/public
 
 ## 系統使用帳號
 
