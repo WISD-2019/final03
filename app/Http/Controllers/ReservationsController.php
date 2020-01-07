@@ -32,8 +32,7 @@ class ReservationsController extends Controller
      */
     public function create()
     {
-        return view('admin.reservation.create');
-
+        //
     }
 
     /**
@@ -42,14 +41,9 @@ class ReservationsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ReservationRequest $request)
+    public function store()
     {
-        Reservations::create($request->all());
-        $reservations             = new Reservations;
-        $reservations->user_id    = $request->user()->id;
-        $reservations->id         = $request->item_id;
-        $reservations->save();
-        return redirect()->route('admin.reservation.index');
+        //
     }
 
     /**
@@ -69,11 +63,9 @@ class ReservationsController extends Controller
      * @param  \App\reservations  $reservations
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-        $reservations=Reservations::find($id);
-        $data=['post'=>$reservations];
-        return view('admin.reservation.edit',$data);
+        //
     }
 
     /**
@@ -83,11 +75,9 @@ class ReservationsController extends Controller
      * @param  \App\reservations  $reservations
      * @return \Illuminate\Http\Response
      */
-    public function update(ReservationRequest $request,$id)
+    public function update()
     {
-        $reservations=Reservations::find($id);
-        $reservations->update($request->all());
-        return redirect()->route('admin.reservation.index');
+        //
     }
 
     /**

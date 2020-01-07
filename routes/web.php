@@ -63,14 +63,6 @@ Route::group(['prefix' => 'admin'], function() {
     //管理員管理後台
     //後台管理員管理首頁
     Route::get('posts'          , ['as' => 'admin.posts.index' , 'uses' => 'UsersController@index']);
-    //後台新增管理員管理資訊
-    Route::get('posts/create'   , ['as' => 'admin.posts.create', 'uses' => 'UsersController@create']);
-    //後台編輯管理員管理資訊
-    Route::get('posts/{id}/edit', ['as' => 'admin.posts.edit'  , 'uses' => 'UsersController@edit']);
-    //後台更新管理員管理資訊
-    Route::patch('posts/{id}',    ['as' => 'admin.posts.update', 'uses' => 'UsersController@update']);
-    //後台儲存管理員管理資訊
-    Route::post('posts',['as'=>'admin.posts.store','uses'=> 'UsersController@store']);
     //後台刪除管理員管理資訊
     Route::delete('posts/{id}'  , ['as' => 'admin.posts.destroy', 'uses' => 'UsersController@destroy']);
 

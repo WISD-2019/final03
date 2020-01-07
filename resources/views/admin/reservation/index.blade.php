@@ -17,12 +17,6 @@
     </div>
 </div>
 <!-- /.row -->
-
-<div class="row" style="margin-bottom: 20px; text-align: right">
-    <div class="col-lg-12">
-        <a href="{{ route('admin.reservation.create') }}" class="btn btn-success" style="background-color: #6f42c1;border-color: #6f42c1">建立訂房資料</a>
-    </div>
-</div>
 <!-- /.row -->
 
 <div class="row">
@@ -73,10 +67,7 @@
                                 <td style="text-align: center">{{ $reservation->need }}</td>
                                 <td style="text-align: center">{{ $reservation->status?'已取消':'預約中'}}</td>
                                 <td style="text-align: center">{{ $reservation->closed?'已完成':'處理中'}}</td>
-
                                     <td style="text-align: center">
-                                    <a href="{{route('admin.reservation.edit',$reservation->id)}}">編輯</a>
-                                    /
                                     <form action="{{ route('admin.reservation.destroy', $reservation->id) }}" method="POST">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
