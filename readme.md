@@ -106,21 +106,21 @@
 
     使畫面看起來不單調，讓此系統深受使用者喜愛
 
-- 後台樣板-[Side Bar](https://startbootstrap.com/templates/simple-sidebar/)
+- 後台樣板- [Side Bar](https://startbootstrap.com/templates/simple-sidebar/)
 
     為製做簡易操作介面，讓管理者輕鬆使用
 
 ## 系統復原步驟
 
-1. 複製https://github.com/WISD-2019/final03.git 本系統在GitHub的專案，打開Source tree，點選clone後，輸入以下資料
+1.｜ 複製https://github.com/WISD-2019/final03.git 本系統在GitHub的專案，打開Source tree，點選clone後，輸入以下資料
 
     。Source Path:https://github.com/WISD-2019/final03.git
     
     。Destination Path:C:\wagon\uwamp\www\final03
 
-2. 打開cmder，切換至專案所在資料夾，cd final03
+2.｜ 打開cmder，切換至專案所在資料夾，cd final03
 
-3. 在cmder輸入以下命令，以復原此系統：
+3.｜ 在cmder輸入以下命令，以復原此系統：
 
     。composer install
     
@@ -128,7 +128,7 @@
     
     。composer run‐script post‐create‐project‐cmd
 
-4. 將專案打開 在.env檔案內輸入資料庫主機IP、Port、名稱、與帳密如下：
+4.｜ 將專案打開 在.env檔案內輸入資料庫主機IP、Port、名稱、與帳密如下：
 
     。DB_HOST=127.0.0.1
 
@@ -140,11 +140,11 @@
 
     。DB_PASSWORD=root
 
-5. 在cmder輸入以下命令，將所有資料表產生至final03資料庫內
+5.｜ 在cmder輸入以下命令，將所有資料表產生至final03資料庫內
 
     。php artisan migrate
 
-6. 開啟UwAmp，點選PHPMyAdmin，輸入以下資料後並點擊登入，進入MySQL後，建立新資料庫，名稱為final03，將專案sql資料夾裡的rooms.sql(C:\wagon\uwamp\www\final03\sql\rooms.sql)和users.sql(C:\wagon\uwamp\www\final03\sql\users.sql)匯入
+6.｜ 開啟UwAmp，點選PHPMyAdmin，輸入以下資料後並點擊登入，進入MySQL後，建立新資料庫，名稱為final03，將專案sql資料夾裡的rooms.sql(C:\wagon\uwamp\www\final03\sql\rooms.sql)和users.sql(C:\wagon\uwamp\www\final03\sql\users.sql)匯入
 
     。資料庫系統:MYSQL
 
@@ -154,7 +154,7 @@
 
     。密碼:root
 
-7. 在UwAmp下，點選Apache config，選擇port 8000 ，並在Document Root 輸入{DOCUMENTPATH}/final03/public
+7.｜ 在UwAmp下，點選Apache config，選擇port 8000 ，並在Document Root 輸入{DOCUMENTPATH}/final03/public
 
 ## 系統使用帳號
 
