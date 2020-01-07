@@ -1,5 +1,6 @@
 <p align="center"><img src="file:///C:/Users/user/Desktop/readme/comment.PNG" width="400"></p>
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+![image](https://raw.githubusercontent.com/WISD-2019/final03/master/comment.PNG)
 
 
 ## 系統的作用
