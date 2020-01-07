@@ -10,18 +10,11 @@
 ## 系統的作用
 
 線上訂房系統
-•	讓使用者透過此系統的簡單操作就可進行線上訂房
-•	讓使用者了解民宿
-•	讓管理者在一套系統裡就可管控所有顧客及訂房資料
 
+- 讓使用者透過此系統的簡單操作就可進行線上訂房
+- 讓使用者了解民宿
+- 讓管理者在一套系統裡就可管控所有顧客及訂房資料
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
