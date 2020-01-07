@@ -44,15 +44,49 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 
 
 初始專案 [3A632068 彭惠昕](https://github.com/3A632068)
+
 資料庫及資料表建立、資料表關連  [3A632055 姚佳心](https://github.com/3A632055) [3A632068 彭惠昕](https://github.com/3A632068)
 
 ## 額外使用的套件或樣板
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+前台樣板-Startbootstrap Clean Blog
+
+使畫面看起來不單調，讓此系統深受使用者喜愛
+
+後台樣板-Side Bar
+
+為製做簡易操作介面，讓管理者輕鬆使用
 
 ## 系統復原步驟
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+複製https://github.com/WISD-2018/final09.git本系統在GitHub的專案，打開Source tree，點選clone後，輸入以下資料
+
+Source Path:https://github.com/WISD-2018/final09.git
+Destination Path:C:\wagon\uwamp\www\final09
+打開cmder，切換至專案所在資料夾，cd final09
+
+在cmder輸入以下命令，以復原此系統：
+
+composer install
+composer run‐script post‐root‐package‐install
+composer run‐script post‐create‐project‐cmd
+將專案打開 在.env檔案內輸入資料庫主機IP、Port、名稱、與帳密如下：
+
+DB_HOST=127.0.0.1
+DB_PORT=33060
+DB_DATABASE=final09
+DB_USERNAME=root
+DB_PASSWORD=root
+在cmder輸入以下命令，將所有資料表產生至final09資料庫內
+
+php artisan migrate
+開啟UwAmp，點選PHPMyAdmin，輸入以下資料後並點擊登入，進入MySQL後，建立新資料庫，名稱為final09，將final09.sql(C:\wagon\uwamp\www\final09\database\final09.sql)匯入
+
+資料庫系統:MYSQL
+伺服器:localhost:33060
+帳號:root
+密碼:root
+在UwAmp下，點選Apache config，選擇port 8000 ，並在Document Root 輸入{DOCUMENTPATH}/final09/public
 
 ## 系統使用帳號
 
