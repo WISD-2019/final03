@@ -16,8 +16,6 @@
 - 讓管理者在一套系統裡就可管控所有顧客及訂房資料
 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
 ## 系統的主要功能
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
