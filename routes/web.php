@@ -21,10 +21,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('index', function () {
-    return view('bootstarap.index');
-})->name('index');
-
 //最新消息
 Route::get('post', function () {
     return view('bootstarap.post');
