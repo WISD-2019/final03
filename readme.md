@@ -24,6 +24,9 @@
 - 交通(Route::get('traffic', function () { return view('bootstarap.traffic');}) [3A632068 彭惠昕](https://github.com/3A632068)
 - 房型 (Route::get('room', 'RoomController@index')) [3A632068 彭惠昕](https://github.com/3A632068)
 - 房型詳細資料 (Route::get('/room/{room}', 'RoomController@show')) [3A632068 彭惠昕](https://github.com/3A632068)
+- 留言 (Route::get('/comment', 'CommentController@index')) [3A632068 彭惠昕](https://github.com/3A632068)
+- 購物車 (Route::get('/cart', 'CartController@index')) [3A632068 彭惠昕](https://github.com/3A632068)
+
 
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
