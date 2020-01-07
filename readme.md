@@ -35,9 +35,9 @@
 - 訂房管理   [3A632055 姚佳心](https://github.com/3A632055)
 - 留言管理   [3A632055 姚佳心](https://github.com/3A632055)
 
-- // 後台
 
-- Route::group(['prefix' => 'admin'], function() {
+
+  - Route::group(['prefix' => 'admin'], function() {
 
    - //主控台後台
     Route::get('/', ['as' => 'admin.dashboard.index', 'uses' => 'AdminDashboardController@index']);
