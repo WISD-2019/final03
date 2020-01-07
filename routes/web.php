@@ -57,39 +57,55 @@ Route::post('/comment/store', 'CommentController@store')->name('comment.store');
 
 // 後台
 Route::group(['prefix' => 'admin'], function() {
+    //主控台後台
     Route::get('/', ['as' => 'admin.dashboard.index', 'uses' => 'AdminDashboardController@index']);
 
+    //管理員管理後台
+    //後台管理員管理首頁
     Route::get('posts'          , ['as' => 'admin.posts.index' , 'uses' => 'UsersController@index']);
+    //後台新增管理員管理資訊
     Route::get('posts/create'   , ['as' => 'admin.posts.create', 'uses' => 'UsersController@create']);
+    //後台編輯管理員管理資訊
     Route::get('posts/{id}/edit', ['as' => 'admin.posts.edit'  , 'uses' => 'UsersController@edit']);
-    //單元練習< 練習6-4> 設定更新所需的 Route
+    //後台更新管理員管理資訊
     Route::patch('posts/{id}',    ['as' => 'admin.posts.update', 'uses' => 'UsersController@update']);
-    //單元練習< 練習4-3> 開啟新增的Route
+    //後台儲存管理員管理資訊
     Route::post('posts',['as'=>'admin.posts.store','uses'=> 'UsersController@store']);
-    //單元練習< 練習7-1> 設定所需的 Route
+    //後台刪除管理員管理資訊
     Route::delete('posts/{id}'  , ['as' => 'admin.posts.destroy', 'uses' => 'UsersController@destroy']);
 
+    //訂房人管理後台
+    //後台訂房人管理首頁
+    Route::get('reservationer'          , ['as' => 'admin.reservationer.index' , 'uses' => 'ReservationerController@index']);
+    //後台刪除訂房人管理資訊
+    Route::delete('reservationer/{id}'  , ['as' => 'admin.reservationer.destroy', 'uses' => 'ReservationerController@destroy']);
+
+    //訂房管理後台
+    //後台訂房管理首頁
     Route::get('reservation'          , ['as' => 'admin.reservation.index' , 'uses' => 'ReservationsController@index']);
+    //後台新增訂房管理資訊
     Route::get('reservation/create'   , ['as' => 'admin.reservation.create', 'uses' => 'ReservationsController@create']);
+    //後台編輯訂房管理資訊
     Route::get('reservation/{id}/edit', ['as' => 'admin.reservation.edit'  , 'uses' => 'ReservationsController@edit']);
-    //單元練習< 練習6-4> 設定更新所需的 Route
+    //後台更新訂房管理資訊
     Route::patch('reservation/{id}',    ['as' => 'admin.reservation.update', 'uses' => 'ReservationsController@update']);
-    //單元練習< 練習4-3> 開啟新增的Route
+    //後台儲存訂房管理資訊
     Route::post('reservation',['as'=>'admin.reservation.store','uses'=> 'ReservationsController@store']);
-    //單元練習< 練習7-1> 設定所需的 Route
+    //後台刪除訂房管理資訊
     Route::delete('reservation/{id}'  , ['as' => 'admin.reservation.destroy', 'uses' => 'ReservationsController@destroy']);
 
+    //留言管理後台
+    //後台留言管理首頁
     Route::get('comments'          , ['as' => 'admin.comments.index' , 'uses' => 'CommentsController@index']);
+    //後台新增留言管理資訊
     Route::get('comments/create'   , ['as' => 'admin.comments.create', 'uses' => 'CommentsController@create']);
+    //後台編輯留言管理資訊
     Route::get('comments/{id}/edit', ['as' => 'admin.comments.edit'  , 'uses' => 'CommentsController@edit']);
-    //單元練習< 練習6-4> 設定更新所需的 Route
+    //後台更新留言管理資訊
     Route::patch('comments/{id}',    ['as' => 'admin.comments.update', 'uses' => 'CommentsController@update']);
-    //單元練習< 練習4-3> 開啟新增的Route
+    //後台儲存留言管理資訊
     Route::post('comments',['as'=>'admin.comments.store','uses'=> 'CommentsController@store']);
-    //單元練習< 練習7-1> 設定所需的 Route
+    //後台刪除留言管理資訊
     Route::delete('comments/{id}'  , ['as' => 'admin.comments.destroy', 'uses' => 'CommentsController@destroy']);
-
-    Route::get('reservationer'          , ['as' => 'admin.reservationer.index' , 'uses' => 'ReservationerController@index']);
-    Route::delete('reservationer/{id}'  , ['as' => 'admin.reservationer.destroy', 'uses' => 'ReservationerController@destroy']);
 
 });
