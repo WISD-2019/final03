@@ -41,6 +41,9 @@
                 <a href="{{ route('admin.posts.index') }}"><i class="fa fa-fw fa-edit"></i> 管理員管理</a>
             </li>
             <li>
+                <a href="{{ route('admin.reservationer.index') }}"><i class="fa fa-fw fa-edit"></i> 使用者管理</a>
+            </li>
+            <li>
                 <a href="{{ route('admin.reservation.index') }}"><i class="fa fa-fw fa-edit"></i> 訂房管理</a>
             </li>
             <li>
