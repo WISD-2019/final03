@@ -26,7 +26,6 @@
                 <thead>
                     <tr>
                         <th width="200" style="text-align: center">使用者編號</th>
-                        <th width="200" style="text-align: center">職位</th>
                         <th width="150" style="text-align: center">姓名</th>
                         <th width="100" style="text-align: center">性別</th>
                         <th width="150" style="text-align: center">生日</th>
@@ -39,10 +38,9 @@
                 </thead>
                 <tbody>
                 @foreach($users as $user)
-                    @if($user->job_name == "使用者")
+                    @if($user->type == "1")
                     <tr >
                         <td style="text-align: center">{{ $user->id }}</td>
-                        <td style="text-align: center">{{ $user->job_name}}</td>
                         <td style="text-align: center">{{ $user->name }}</td>
                         <td style="text-align: center">{{ $user->gender?'男':'女'}}</td>
                         <td style="text-align: center">{{ $user->birthday }}</td>
