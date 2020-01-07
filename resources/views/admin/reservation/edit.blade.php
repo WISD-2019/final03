@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 
-@section('title', '編輯文章')
+@section('title', '編輯訂房')
 
 @section('content')
     <!-- Page Heading -->
@@ -24,7 +24,6 @@
     <!--單元練習< 練習6-2>  修改 edit.blade.php表單-->
     <div class="row">
         <div class="col-lg-12">
-            @foreach($reservations as $reservation)
             <form action="/admin/reservation/{{$post->id}}" method="POST" role="form">
                 {{ csrf_field() }}
                 {{ method_field('PATCH') }}
@@ -45,9 +44,9 @@
                     <label for="bookdate">生日：</label><br>
                     <input name="birthday" type="date" id="bookdate" placeholder="2014-09-18">
                     <label style="color: rgba(71,63,74,0.77)">原生日：
-                    <span id="name-{{ $reservation->user_id }}">
-                                {{ $reservation->user->birthday }}
-                            </span></label>
+{{--                    <span id="name-{{ $reservation->user_id }}">--}}
+{{--                                {{ $reservation->user->birthday }}--}}
+{{--                            </span></label>--}}
                 </div>
 
                 <div class="form-group">
@@ -116,7 +115,6 @@
                 </div>
 
             </form>
-            @endforeach
             <p>&nbsp;</p>
             <p>&nbsp;</p>
             <p>&nbsp;</p>

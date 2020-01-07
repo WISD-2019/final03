@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 
-@section('title', '管理員管理')
+@section('title', '使用者管理')
 
 @section('content')
 <!-- Page Heading -->
@@ -17,12 +17,6 @@
     </div>
 </div>
 <!-- /.row -->
-
-<div class="row" style="margin-bottom: 20px; text-align: right">
-    <div class="col-lg-12">
-        <a href="{{ route('admin.posts.create') }}" class="btn btn-success" style="background-color: #6f42c1;border-color: #6f42c1">建立管理員</a>
-    </div>
-</div>
 <!-- /.row -->
 
 <div class="row">
@@ -45,7 +39,7 @@
                 </thead>
                 <tbody>
                 @foreach($users as $user)
-                    @if($user->job_name == "管理者")
+                    @if($user->job_name == "使用者")
                     <tr >
                         <td style="text-align: center">{{ $user->id }}</td>
                         <td style="text-align: center">{{ $user->job_name}}</td>
@@ -57,9 +51,7 @@
                         <td style="text-align: center">{{ $user->email }}</td>
                         <td style="text-align: center">{{ $user->password }}</td>
                         <td style="text-align: center">
-                            <a href="{{route('admin.posts.edit',$user->id)}}">編輯</a>
-                            /
-                            <form action="{{ route('admin.posts.destroy', $user->id) }}" method="POST">
+                            <form action="{{ route('admin.reservationer.destroy', $user->id) }}" method="POST">
                                 {{ csrf_field() }}
                                 {{ method_field('DELETE') }}
 

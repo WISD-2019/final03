@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 
-@section('title', '管理員管理')
+@section('title', '訂房管理')
 
 @section('content')
 <!-- Page Heading -->
