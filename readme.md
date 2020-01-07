@@ -112,5 +112,6 @@ php artisan migrate
 
 ## 系統開發人員
 
--[3A632055 姚佳心](https://github.com/3A632055)
--[3A632068 彭惠昕](https://github.com/3A632068)
+- [3A632055 姚佳心](https://github.com/3A632055)
+
+- [3A632068 彭惠昕](https://github.com/3A632068)
